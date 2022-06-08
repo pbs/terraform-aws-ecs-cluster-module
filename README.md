@@ -6,7 +6,7 @@
 
 ```hcl
 module "cluster" {
-    source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
+    source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.2"
 }
 ```
 
@@ -26,7 +26,7 @@ Integrate this module like so:
 
 ```hcl
 module "ecs-cluster" {
-  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
+  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.2"
 
   # Tagging Parameters
   organization = var.organization
@@ -42,7 +42,7 @@ module "ecs-cluster" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`x.y.z`
+`0.0.2`
 
 Note, however that subtrees can be altered as desired within repositories.
 
