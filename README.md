@@ -6,7 +6,7 @@
 
 ```hcl
 module "cluster" {
-    source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.1"
+    source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
 }
 ```
 
@@ -26,7 +26,7 @@ Integrate this module like so:
 
 ```hcl
 module "ecs-cluster" {
-  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.1"
+  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -42,7 +42,7 @@ module "ecs-cluster" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.1`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -86,7 +86,6 @@ No modules.
 | [aws_security_group.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
 | [aws_security_group_rule.sg_egress](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule) | resource |
 | [aws_ami.amazon_linux_ecs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_iam_policy_document.assume_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_iam_policy_document.policy_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_subnets.private_subnets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnets) | data source |
