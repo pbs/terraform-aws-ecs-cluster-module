@@ -1,13 +1,13 @@
-# PBS TF ecs cluster module
+# PBS TF ECS Cluster Module
 
 ## Installation
 
 ### Using the Repo Source
 
+Use this URL for the source of the module. See the usage examples below for more details.
+
 ```hcl
-module "cluster" {
-    source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
-}
+github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -25,7 +25,7 @@ The instances in this cluster will also automatically rotate out instances to en
 Integrate this module like so:
 
 ```hcl
-module "ecs-cluster" {
+module "cluster" {
   source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
 
   # Tagging Parameters
