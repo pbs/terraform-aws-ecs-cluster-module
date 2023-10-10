@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.20
+github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -26,7 +26,7 @@ Integrate this module like so:
 
 ```hcl
 module "cluster" {
-  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.20"
+  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -42,7 +42,7 @@ module "cluster" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.20`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
