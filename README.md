@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.22
+github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -26,7 +26,7 @@ Integrate this module like so:
 
 ```hcl
 module "cluster" {
-  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=0.0.22"
+  source = "github.com/pbs/terraform-aws-ecs-cluster-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -42,7 +42,7 @@ module "cluster" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.22`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -110,7 +110,7 @@ No modules.
 | <a name="input_min_size"></a> [min\_size](#input\_min\_size) | Minimum size for the autoscaling group to scale out to for the cluster | `number` | `3` | no |
 | <a name="input_minimum_scaling_step_size"></a> [minimum\_scaling\_step\_size](#input\_minimum\_scaling\_step\_size) | Capacity provider maximum scaling step size | `number` | `1` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the cluster | `string` | `null` | no |
-| <a name="input_protect_from_scale_in"></a> [protect\_from\_scale\_in](#input\_protect\_from\_scale\_in) | Allow ECS to protect instances running tasks from being terminated while tasks are running on them. Must be false when destroying cluster | `bool` | `true` | no |
+| <a name="input_protect_from_scale_in"></a> [protect\_from\_scale\_in](#input\_protect\_from\_scale\_in) | Prevent ECS auto-scaling from terminating instances on scale-in. Must be false when destroying cluster | `bool` | `false` | no |
 | <a name="input_role_policy_json"></a> [role\_policy\_json](#input\_role\_policy\_json) | (optional) IAM policy to attach to role used for this task | `string` | `null` | no |
 | <a name="input_subnets"></a> [subnets](#input\_subnets) | Subnets for the service. If null, private and public subnets will be looked up based on environment tag and one will be selected based on public\_service. | `list(string)` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Extra tags | `map(string)` | `{}` | no |
