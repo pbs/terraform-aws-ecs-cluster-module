@@ -53,8 +53,8 @@ variable "max_instance_lifetime" {
 }
 
 variable "protect_from_scale_in" {
-  description = "Allow ECS to protect instances running tasks from being terminated while tasks are running on them. Must be false when destroying cluster"
-  default     = true
+  description = "Prevent ECS auto-scaling from terminating instances on scale-in. Must be false when destroying cluster"
+  default     = false
   type        = bool
 }
 
